@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 381678619966485677}
   - component: {fileID: 381678619966485674}
   - component: {fileID: 381678619966485676}
+  - component: {fileID: 9202327052759576415}
   m_Layer: 0
   m_Name: panel
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &381678619966485674
 SpriteRenderer:
@@ -111,3 +112,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9202327052759576415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381678619966485675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf1fc2eede983149afff84c8bde0f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasMine: 0
+  emptyTextures:
+  - {fileID: 21300000, guid: 8734e8aa91b255c42b734df041631a0a, type: 3}
+  - {fileID: 21300000, guid: 423d5a04179ac7e4aa90bb3ab8c47937, type: 3}
+  - {fileID: 21300000, guid: 04bfae4a1f1ed5b41b977517b09d8c24, type: 3}
+  - {fileID: 21300000, guid: 31fb8035b6d76d7408f63f89b4722d6b, type: 3}
+  - {fileID: 21300000, guid: 4c56898a31cf3cc428c65dc4d73c5b2e, type: 3}
+  - {fileID: 21300000, guid: f060b8db03952b445b09a7c5080431d6, type: 3}
+  - {fileID: 21300000, guid: fa7a4ea9ea43b4b43b3d3cc37e3e4ef5, type: 3}
+  - {fileID: 21300000, guid: eeb8ec4a16194cb4590f4615c3c2f394, type: 3}
+  - {fileID: 21300000, guid: 29f44b2564362f340a4f41442f0f27d6, type: 3}
+  mineTexture: {fileID: 21300000, guid: 67121855edfa67b4780ae84530b64010, type: 3}
