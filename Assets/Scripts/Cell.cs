@@ -78,8 +78,9 @@ public class Cell : MonoBehaviour
             //Al método de abajo le pasamos la posición de esta celda concreta
             //Cargamos la textura de minas adyacentes adecuada
             LoadTexture(GridHelper.CountAdjacentMines(x, y)); //Usamos el método que cuenta cuantas minas hay alrededor de la celda
-
             //descubrir toda el área sin minas alrededor de la celda destapada
+            //Le pasamos la posición en X e Y de esa celda concreta y vemos en el array de celdas si esta había sido visitada o no
+            GridHelper.FloodFillUncover(x, y, new bool[GridHelper.w, GridHelper.h]);
             //comprobar si el juego ha terminado o no
 
 
