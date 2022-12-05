@@ -98,8 +98,30 @@ public class GridHelper : MonoBehaviour
             FloodFillUncover(x + 1, y, visited); //Visitamos derecha
             FloodFillUncover(x, y - 1, visited); //Visitamos abajo
             FloodFillUncover(x, y + 1, visited); //Visitamos arriba
-        }
-
-            
+            //Si queremos implementar Conectividad8 faltarían por ver las esquinas
+            FloodFillUncover(x - 1, y - 1, visited); //Visitamos abajo-izquierda
+            FloodFillUncover(x - 1, y + 1, visited); //Visitamos arriba-izquierda
+            FloodFillUncover(x + 1, y - 1, visited); //Visitamos abajo-derecha
+            FloodFillUncover(x + 1, y + 1, visited); //Visitamos arriba-derecha
+        }    
     }
+
+    //Método para detectar si el juego ha terminado devolviéndome verdadero o falso
+    public static bool HasTheGameEnded()
+    {
+        //Bucle para recorrer el array de celdas 
+        foreach (Cell c in cells)
+        {
+            //Ver si no hay paneles sin descubrir salvo aquellos que contengan minas
+            //Si hay celdas cubiertas y sin mina el juego no ha terminado
+            if (c.IsCovered() && !c.hasMine)
+            {
+                //El juego no ha terminado, devolvemos false
+                return false;
+            }
+        }
+        //Si no quedan celdas por destapar, salvo las que contengan minas, entonces el juego ha acabado
+        return true;
+    } //Este método cuando devuelva un valor, no seguirá ejecutándose, saldrá del método
+
 }
